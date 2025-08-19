@@ -5,6 +5,7 @@ const CURRENCIES = [
     {code: "CNY", name:"Chinese Yuan"},
     {code: "JPY", name:"Japanese Yen"},
     {code: "GBP", name:"Pound Sterling"},
+    {code: "MXN", name:"Mexican Peso"}
 ]
 
 function populateSelect(selectEl, items, opts) {
