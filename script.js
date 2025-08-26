@@ -40,12 +40,13 @@ populateSelect(currencyEl_one, CURRENCIES, {selected: "USD"})
 populateSelect(currencyEl_two, CURRENCIES, {selected: "EUR"})
 
 function calculate() {
-    const currency_one = currency_one.value
-    const currency_two = currency_two.value
+    const currency_one = currencyEl_one.value
+    const currency_two = currencyEl_two.value
 
-    fetch(`https://api.exchange-api.com/v4/latest/${currency_one}`)
+    fetch(`https://api.exchangerate-api.com/v4/latest/${currency_one}`)
     .then((res) => res.json())
     .then((data) => {
+        console.log(data)
         const rate = data.rates[currency_two]
         document.getElementById("rate")
         .innerText = `1 ${currency_one} = ${rate} ${currency_two}`
